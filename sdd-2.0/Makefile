@@ -4,7 +4,7 @@ DEBUG_DIR = debug
 BUILD_CFLAGS = -std=c99 -O2 -Wall -finline-functions -Iinclude -DNDEBUG
 DEBUG_CFLAGS = -std=c99 -O0 -g -Wall -Iinclude
 OS := $(shell uname -s)
-LIBRARY_FLAGS := -Llib/${OS} -lsdd -lm
+LIBRARY_FLAGS := -Llib/${OS} -lsdd -lm -lexecinfo -fPIE
 
 EXEC_FILE = sdd
 SRC = src/main.c src/getopt.c \
